@@ -1,0 +1,239 @@
+(function ($) {
+ "use strict";
+
+/*----------------------------
+ jQuery MeanMenu
+------------------------------ */
+	jQuery('nav#dropdown').meanmenu();	
+	
+/*----------------------------
+ wow js active
+------------------------------ */
+ new WOW().init();
+    
+    $('.menu-link').bigSlide();
+    
+    
+    /* ---------------------
+	 Category menu
+	--------------------- */
+	$('#cate-toggle li.has-sub>a').on('click', function(){
+		$(this).removeAttr('href');
+		var element = $(this).parent('li');
+		if (element.hasClass('open')) {
+			element.removeClass('open');
+			element.find('li').removeClass('open');
+			element.find('ul').slideUp();
+		}
+		else {
+			element.addClass('open');
+			element.children('ul').slideDown();
+			element.siblings('li').children('ul').slideUp();
+			element.siblings('li').removeClass('open');
+			element.siblings('li').find('li').removeClass('open');
+			element.siblings('li').find('ul').slideUp();
+		}
+	});
+	$('#cate-toggle>ul>li.has-sub>a').append('<span class="holder"></span>');  
+    
+    
+     /*---------------------
+     countdown
+    --------------------- */
+	$('[data-countdown]').each(function() {
+	  var $this = $(this), finalDate = $(this).data('countdown');
+	  $this.countdown(finalDate, function(event) {
+		$this.html(event.strftime('<span class="cdown days"><span class="time-count">%-D</span> <p>Days</p></span> <span class="cdown hour"><span class="time-count">%-H</span> <p>Hour</p></span> <span class="cdown minutes"><span class="time-count">%M</span> <p>Min</p></span> <span class="cdown second"> <span><span class="time-count">%S</span> <p>Sec</p></span>'));
+	  });
+	});	
+    
+    /*----------------------------
+     owl active
+    ------------------------------ */  
+    $(".testimonial-list").owlCarousel({
+          autoPlay: true, 
+          slideSpeed:1000,
+          pagination:true,
+          navigation:false,	  
+          items : 1,
+          /* transitionStyle : "fade", */    /* [This code for animation ] */
+          navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+          itemsDesktop : [1199,1],
+          itemsDesktopSmall : [980,1],
+          itemsTablet: [768,1],
+          itemsMobile : [479,1],
+      });
+    $(".partners-brand").owlCarousel({
+          autoPlay: false, 
+          slideSpeed:2000,
+          pagination:false,
+          navigation:false,	  
+          items : 5,
+          /* transitionStyle : "fade", */    /* [This code for animation ] */
+          navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+          itemsDesktop : [1199,5],
+          itemsDesktopSmall : [980,3],
+          itemsTablet: [768,3],
+          itemsMobile : [479,1],
+      });
+    $(".author-carousel").owlCarousel({
+          autoPlay: false, 
+          slideSpeed:2000,
+          pagination:false,
+          navigation:false,	  
+          items : 1,
+          /* transitionStyle : "fade", */    /* [This code for animation ] */
+          navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+          itemsDesktop : [1199,1],
+          itemsDesktopSmall : [980,1],
+          itemsTablet: [768,1],
+          itemsMobile : [479,1],
+      });
+
+
+    $('.counter').counterUp({
+        delay: 10,
+        time: 2000
+    });
+
+    $('.play-btn').magnificPopup({
+            disableOn: 0,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: true,
+
+            fixedContentPos: false
+        }); 
+
+    
+    
+    /*------------------------------------------------
+      Top menu stick
+     -------------------------------------------------- */
+    var sticky_menu = $(".sticky-header");
+     var pos = sticky_menu.position();
+     if (sticky_menu.length) {
+       var windowpos = sticky_menu.top;
+         $(window).on('scroll', function() {
+            var windowpos = $(window).scrollTop();
+             if (windowpos > pos.top) {
+                 sticky_menu.addClass("sticky");
+            } else {
+               sticky_menu.removeClass("sticky");
+             }
+         });
+     };
+    
+    
+    /*--------------------------
+     scrollUp
+    ---------------------------- */	
+	$.scrollUp({
+        scrollText: '<i class="fa fa-angle-up"></i>',
+        easingType: 'linear',
+        scrollSpeed: 900,
+        animation: 'fade'
+    }); 	
+    
+    
+    
+    /*--------Campus History Script--------*/
+    $(window).load(function() {
+      // The slider being synced must be initialized first
+        if($('#gt_history_pagination').length){
+            $('#gt_history_pagination').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 112,
+                asNavFor: '#gt_history_slider'
+            });
+         }
+        if($('#gt_history_slider').length){
+            $('#gt_history_slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#gt_history_pagination"
+            });
+        }
+    });
+    
+    
+    /*--------------------------
+        Pretty Photo Script
+    ---------------------------- */
+    if($("a[data-rel^='prettyPhoto']").length){
+        $("a[data-rel^='prettyPhoto']").prettyPhoto();
+    }
+  /*---------------------
+     fancrbox js 
+    --------------------- */
+    $('.fancybox-js-class').fancybox({
+        padding : 0,
+        openEffect  : 'elastic',
+        closeBtn: true,
+    });     
+    
+    /*--------------------
+       Accordion
+    -------------------------*/
+    $(".widget-categories").collapse({
+		accordion:true,
+	  open: function() {
+		this.slideDown(550);
+	  },
+	  close: function() {
+		this.slideUp(550);
+	  }		
+	});	
+    $(".accordion-active").collapse({
+		accordion:true,
+	  open: function() {
+		this.slideDown(550);
+	  },
+	  close: function() {
+		this.slideUp(550);
+	  }		
+	});
+  
+  $(".accordion-active02").collapse({
+		accordion:true,
+	  open: function() {
+		this.slideDown(550);
+	  },
+	  close: function() {
+		this.slideUp(550);
+	  }		
+	});
+    
+    $('#home a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
+	$('#profile a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+    
+    
+    
+ 
+})(jQuery); 
+
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){  
+    $('.sticky-header').addClass("sticky");
+  }
+  else{
+    $('.sticky-header').removeClass("sticky");
+  }
+});
+
+
+

@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Prosto+One|Raleway|Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.pregunta input[type="checkbox"]{
+    display: none;
+}
+
+.pregunta label{
+    font-family: 'Lato', sans-serif;
+    color: #146300;
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pregunta label:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.pregunta label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid #023013;
+    border-radius: 5px;
+    position: absolute;
+    left: 17px;
+    top: 3px;
+}
+
+.pregunta input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    background: #028027;
+    border-radius: 3px;
+    color: #fff;
+
+}
+
+.pregunta input[type="checkbox"]:checked + label::before{
+    display: none;
+}
+
+body{
+    display: flex;
+    background: url("../img/fondo2.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.contenido{
+    width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+div.bienvenida > h1{
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-family: 'Prosto One';
+	font-weight: bold;
+	font-size: 70px;
+	color: #003300;
+}
+
+hr{
+	width: 50%;
+	margin: auto;
+	border-color: #003300;
+}
+
+input[type="text"] {
+    font-size: 16px; /* Adjust the font size as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    width: 100%; /* Make the input element fill the container */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Style the radio buttons and labels */
+input[type="radio"] {
+    margin-right: 5px; /* Add spacing between radio buttons */
+}
+
+div.bienvenida > p{
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	margin-top: 1%;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 25px;
+	color: #003300;
+}
+
+.pregunta{
+    margin: 5px;
+}
+
+input[type="submit"]{
+    width: 30%;
+    margin: auto;
+    display: block;
+    background: transparent;
+    padding: 15px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: #0074D9;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#formulario > .nombre{
+    background-color: rgba(255, 204, 0, 1);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#formulario > .nombre > label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formulario > .nombre > input{
+    position: relative;
+    left: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    color: navy;
+    border-bottom: 2px solid white;
+    background: transparent;
+    width: 50%;
+    cursor: pointer;
+}
+
+#formulario > .nombre > input::placeholder{
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+}
+
+#formulario > .nombre > label:nth-child(3){
+    position: relative;
+    margin-left: 30px;
+}
+
+#formulario > .nombre > input:nth-child(4){
+    width: 15%;
+}
+
+#formulario > .nombre > input:nth-child(8){
+    width: 20%;
+}
+
+.boton-finalizar, .boton-cancelar{
+    background: transparent;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+.boton-cancelar{
+    color: #FF4136;
+}
+
+.boton-finalizar{
+    color: #2ECC40;
+}
+
+p > span{
+    font-weight: bold;
+}
+
+#hr{
+    margin: 0;
+    border-color: black;
+}
+
+.contenido2{
+    width: 100%;
+    display: flex;
+}
+
+.resultados{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+.resultados > *{
+    display: inline-block;
+}
+
+.bloque{
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: white;
+    color: #001f3f;
+}
+
+.bloque > p{
+    vertical-align: middle;
+    font-size: 1.8rem;
+    font-family: 'Raleway';
+    
+}
+
+div.resultados > div.title > p:nth-child(1) > span{
+    font-family: 'Prosto One';
+    font-size: 2rem;
+    text-align: center;
+}
+
+div.resultados > div.title > p:nth-child(2){
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+}
+
+div.resultados > div.title > p:nth-child(2) > span{
+    font-family: 'Roboto';
+}
+
+div.resultados > div.title{
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: rgba(0,31,63,1);
+    color: #eee;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+
+a{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10px;
+    display: block;
+    background: transparent;
+    padding: 15px;
+    border: 3px solid #0074D9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: #0074D9;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.title hr{
+    border-color: #fff;
+}
+
+div.notificacion{
+    width: 100%;
+    border:1px solid rgba(0,31,125,1);
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    color: rgba(0,31,50,1);
+}
+
+.notificacion > h2, h2.notificacion{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+    color: rgba(0,31,125,1);
+}
+
+.notificacion > p{
+    margin-bottom: 5px;
+}
+
+h2.notificacion{
+    font-family: 'Prosto one';
+    background: transparent;
+}
+
+.ayuda{
+    display: block;
+    width: auto;
+    position: fixed;
+}
+
+.ayuda > a{
+    position: absolute;
+    left: 15;
+    top: 15;
+    text-transform: none;
+    font-family: Roboto;
+    display: block;
+    width: auto;
+    height: auto;
+    color: rgba(0,31,125,1);
+    border: none;
+}
+
+.ayuda > a > i{
+    font-size: 3rem;
+    color: #001f3f;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Raleway';
+}
+
+table th, table td{
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+table thead{
+    background-color:  rgba(0,31,63,1);
+    color: #fff;
+}
+
+table tbody{
+    background-color: rgba(0,116,217,0.7);
+    font-family: 'Raleway';
+    color: rgba(0,31,63,1);
+}
+
+table #puntos{
+    border-bottom: 1px solid black;
+}
+
+table tr td, table tr th{
+    width: 7.1%;
+}
+
+table tr td:nth-child(1), table tr:nth-child(1) th:nth-child(1),
+table tr td:nth-child(2), table tr:nth-child(1) th:nth-child(2),
+table tr td:nth-child(3), table tr:nth-child(1) th:nth-child(3){
+    width: 12%;
+}

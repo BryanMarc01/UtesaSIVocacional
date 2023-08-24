@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Test Vocacional</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script src="scriptt.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<br><b><p>Enviar los resultados al correo electronico</p></b>
+
+<form  method="POST"> <!--determinar el tipo de información-->
+<tr><td>Email: </td>
+<td><input type="email" id="direccion" name="correo" placeholder="Introduce un correo valido" required /></td></tr>
+<tr><td><input type="button" value="Enviar" name="submit"   onclick="enviar_datos();" /></td><td></td></tr>
+<div id="mostrar">
+	
+</div>
+</form>
+</body>
+</html>
